@@ -71,6 +71,7 @@ export default function General() {
         <Select aria-label="Currency" name="currency" defaultValue="cad">
           <option value="cad">CAD - Canadian Dollar</option>
           <option value="usd">USD - United States Dollar</option>
+          <option value="ngn">NGN - Nigerian Naira</option>
         </Select>
       </div>
     </section>

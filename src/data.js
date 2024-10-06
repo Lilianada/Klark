@@ -9,6 +9,13 @@ export async function getRecentOrders() {
 export async function getEmployees() {
   return [
     {
+      idNo: 1000,
+      name: 'Esli Xander',
+      startDate: 'May 9, 2024',
+      emailAddress: 'leslie.alexander@example.com',
+      role: 'Admin'
+    },
+    {
       idNo: 3000,
       name: 'Leslie Alexander',
       startDate: 'May 9, 2024',

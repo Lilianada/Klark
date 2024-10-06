@@ -195,7 +195,7 @@ export function ApplicationLayout({ events, children }) {
             <SidebarSpacer />
 
             <SidebarSection>
-              <SidebarItem href="#">
+              <SidebarItem href="/notifications">
                 <BellIcon />
                 <SidebarLabel>Notifications</SidebarLabel>
               </SidebarItem>
@@ -203,7 +203,7 @@ export function ApplicationLayout({ events, children }) {
                 <QuestionMarkCircleIcon />
                 <SidebarLabel>Resources</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="#">
+              <SidebarItem href="/changelog">
                 <SparklesIcon />
                 <SidebarLabel>Changelog</SidebarLabel>
               </SidebarItem>

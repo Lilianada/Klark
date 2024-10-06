@@ -1,6 +1,14 @@
 import { Avatar } from '@/components/avatar'
 import { Button } from '@/components/button'
 import { Heading } from '@/components/heading'
+import {
+  Pagination,
+  PaginationGap,
+  PaginationList,
+  PaginationNext,
+  PaginationPage,
+  PaginationPrevious,
+} from '@/components/pagination'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table'
 import { getEmployees } from '@/data'
 
@@ -24,7 +32,7 @@ export default async function Employees() {
             <TableHeader>Name</TableHeader>
             <TableHeader>Email Address</TableHeader>
             <TableHeader>Start Date</TableHeader>
-            <TableHeader className="text-right">Role</TableHeader>
+            <TableHeader>Role</TableHeader>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,11 +47,27 @@ export default async function Employees() {
               </TableCell>
               <TableCell>{employee.emailAddress}</TableCell>
               <TableCell className="text-zinc-500">{employee.startDate}</TableCell>
-              <TableCell className="text-right">{employee.role}</TableCell>
+              <TableCell>{employee.role}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+
+      <Pagination className="mt-6">
+        <PaginationPrevious href="?page=2" />
+        <PaginationList>
+          <PaginationPage href="?page=1">1</PaginationPage>
+          <PaginationPage href="?page=2">2</PaginationPage>
+          <PaginationPage href="?page=3" current>
+            3
+          </PaginationPage>
+          <PaginationPage href="?page=4">4</PaginationPage>
+          <PaginationGap />
+          <PaginationPage href="?page=65">65</PaginationPage>
+          <PaginationPage href="?page=66">66</PaginationPage>
+        </PaginationList>
+        <PaginationNext href="?page=4" />
+      </Pagination>
     </>
   )
 }
