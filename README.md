@@ -167,4 +167,4 @@ Klark is an open-source project licensed under the MIT License.
 
 ## Contact
 
-For any questions or suggestions, please contact us at [info@klark.com](mailto:info@buildingbloques.com).
+For any questions or suggestions, please contact us at [info@buildingbloques.com](mailto:info@buildingbloques.com).
