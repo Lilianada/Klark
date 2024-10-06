@@ -119,7 +119,7 @@ export function DropdownDivider({ className, ...props }) {
 
 export function DropdownLabel({ className, ...props }) {
   return (
-    <Headless.Label {...props} data-slot="label" className={clsx(className, 'col-start-2 row-start-1')} {...props} />
+    <Headless.Label {...props} data-slot="label" className={clsx(className, 'col-start-2 row-start-1 cursor-pointer')} {...props} />
   )
 }
 
