@@ -204,7 +204,7 @@ export function ApplicationLayout({ events, children }) {
               </SidebarItem>
               <SidebarItem href="https://github.com/Lilianada/Klark">
                 <DocumentIcon />
-                <SidebarLabel>Doc</SidebarLabel>
+                <SidebarLabel>Docs</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
           </SidebarBody>

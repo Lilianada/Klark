@@ -21,7 +21,7 @@ export default function SettingIndex() {
   return (
     <div className="flex flex-col mt-6">
       {/* Navbar for tab switching */}
-      <Navbar>
+      <Navbar className='md:border-b-2 md:border-zinc-950 md:dark:border-zinc-600'>
         <NavbarSection className="overflow-scroll sm:overflow-visible">
           {tabs.map((tab, index) => (
             <NavbarItem
@@ -29,7 +29,7 @@ export default function SettingIndex() {
               icon={tab.icon}
               current={selectedTab === index}
               onClick={() => setSelectedTab(index)} 
-              className="p-0 "
+              className="p-0  text-nowrap"
             >
               {tab.name}
             </NavbarItem>
@@ -39,7 +39,6 @@ export default function SettingIndex() {
 
       {/* Main Content */}
       <div className="w-full space-y-6 sm:px-6 lg:px-0 mt-6">
-        {/* Render the content based on the selected tab */}
         <div>
           {tabs[selectedTab].content}
         </div>
