@@ -15,14 +15,17 @@ The information architecture of Klark is organized into several key sections, de
 
    **Metrics:**
    - Total Employees
-   - Total Leave
+   - Total Customers
    - Invoice Overview
-   - Task Summary
+   - Task Summary (see all tasks)
+   - Reminders (see all reminders)
 
    **Quick Actions:**
-   - Clock In/Out
-   - Tasks (Manage tasks and today’s meeting)
-   - Reminders (Set and manage reminders)
+   - Create Invoice
+    - Add New Employee
+    - Add New Task
+    - Set Reminder
+   - Clock In/Out (for employees to track their work hours)
 
    **Employee & Task Actions:**
    - Create Employee
@@ -126,13 +129,33 @@ These components are designed to be flexible and customizable for use in various
 
 ## How to Contribute
 
-We welcome contributions from the community. If you'd like to contribute to Klark, follow these steps:
+We want to make contributing to this project as easy and transparent as
+possible.
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request with a detailed description of your changes.
+## Pull Requests
+
+We actively welcome your pull requests.
+
+1. Fork the repo and create your branch from `main`.
+2. If you've added code that should be tested, add tests.
+3. If you've changed APIs, update the documentation.
+4. Ensure the test suite passes. (`yarn test`)
+5. Make sure your code lints. (`yarn prettier`)
+6. If you haven't already, complete the Contributor License Agreement ("CLA").
 
 Please ensure all changes are well-documented and thoroughly tested before submission.
+
+## Contributor License Agreement ("CLA")
+
+In order to accept your pull request, we need you to submit a CLA. You only need
+to do this once to work on any of Buildingbloques's open source projects.
+
+Complete your CLA here: <https://forms.gle/1ZrLBfnHmdhicWTb9>
+
+## Issues
+
+We use GitHub issues to track public bugs. Please ensure your description is
+clear and has sufficient instructions to be able to reproduce the issue.
 
 ---
 
@@ -144,4 +167,4 @@ Klark is an open-source project licensed under the MIT License.
 
 ## Contact
 
-For any questions or suggestions, please contact us at [info@klark.com](mailto:info@klark.com).
+For any questions or suggestions, please contact us at [info@klark.com](mailto:info@buildingbloques.com).
