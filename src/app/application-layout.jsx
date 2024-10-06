@@ -78,6 +78,10 @@ function AccountDropdownMenu({ anchor }) {
 function EmployeeDropdownMenu({ anchor }) {
   return (
     <DropdownMenu className="min-w-64" anchor={anchor}>
+      <DropdownItem href="/employees">
+        <UserGroupIcon />
+        <DropdownLabel>All Employees</DropdownLabel>
+      </DropdownItem>
       <DropdownItem href="#">
         <GlobeAltIcon />
         <DropdownLabel>Leave</DropdownLabel>
@@ -140,7 +144,7 @@ export function ApplicationLayout({ events, children }) {
                 <DropdownDivider />
                 <DropdownItem href="#">
                   <PlusIcon />
-                  <DropdownLabel>New team&hellip;</DropdownLabel>
+                  <DropdownLabel>New task&hellip;</DropdownLabel>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
