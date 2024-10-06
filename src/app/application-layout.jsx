@@ -33,8 +33,8 @@ import {
   ClipboardIcon,
   ClockIcon,
   Cog8ToothIcon,
+  DocumentIcon,
   GlobeAltIcon,
-  InformationCircleIcon,
   LightBulbIcon,
   PlusIcon,
   ShieldCheckIcon,
@@ -46,7 +46,6 @@ import {
   Cog6ToothIcon,
   HomeIcon,
   QuestionMarkCircleIcon,
-  SparklesIcon,
 } from '@heroicons/react/20/solid'
 import { usePathname } from 'next/navigation'
 
@@ -177,14 +176,10 @@ export function ApplicationLayout({ events, children }) {
                 <CalculatorIcon />
                 <SidebarLabel>Finance</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/settings">
-                <Cog6ToothIcon />
-                <SidebarLabel>Settings</SidebarLabel>
-              </SidebarItem>
             </SidebarSection>
 
             {/* <SidebarSection className="max-lg:hidden">
-              <SidebarHeading>Upcoming Events</SidebarHeading>
+              <SidebarHeading>Todo List</SidebarHeading>
               {events.map((event) => (
                 <SidebarItem key={event.id} href={event.url}>
                   {event.name}
@@ -203,9 +198,13 @@ export function ApplicationLayout({ events, children }) {
                 <QuestionMarkCircleIcon />
                 <SidebarLabel>Resources</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/changelog">
-                <SparklesIcon />
-                <SidebarLabel>Changelog</SidebarLabel>
+              <SidebarItem href="/settings">
+                <Cog6ToothIcon />
+                <SidebarLabel>Settings</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem href="https://github.com/Lilianada/Klark">
+                <DocumentIcon />
+                <SidebarLabel>Doc</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
           </SidebarBody>
