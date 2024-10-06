@@ -1,10 +1,10 @@
 # Contributing to Klark
 
-We are thrilled that you're interested in contributing to **Klark**! Whether you're a beginner or an experienced developer, you're welcome to contribute in any way you can. Contributions can range from code, documentation, bug fixes, feature requests, and much more. Your input makes Klark better for everyone!
+We are thrilled 🥳 that you're interested in contributing to **Klark**! Whether you're a beginner or an experienced developer, you're welcome to contribute in any way you can. Contributions can range from code, documentation, bug fixes, feature requests, and much more. Your input makes Klark better for everyone!
 
-## How to Contribute
+## How to Contribute 🚀
 
-There are several ways to contribute to Klark:
+There are several ways to contribute to Klark ☞:
 
 - Reporting issues
 - Proposing new features
@@ -18,11 +18,11 @@ If you're not sure where to start, take a look at our issues labeled [`good firs
 
 You can also contact the maintainers via [info@buildingbloques.com](mailto:info@buildingbloques.com) or submit an issue, and one of us will guide you through the process.
 
-## Code of Conduct
+## Code of Conduct 📄
 
 Please note that this project is released with a [Code of Conduct](https://github.com/Klark/.github/blob/main/CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
 
-## Submitting a Pull Request
+## Submitting a Pull Request ✔︎
 
 Follow these steps to submit a pull request (PR):
 
@@ -41,7 +41,7 @@ feat-654-add-new-settings-page
 4. Push the branch to your fork.
 5. Submit a pull request to the main **Klark** repository.
 
-### Pull Request Guidelines
+### Pull Request Guidelines 📝
 
 - Provide a clear description of what your PR is intended to accomplish.
 - Reference the issue number if applicable.
@@ -49,7 +49,7 @@ feat-654-add-new-settings-page
 - If your PR adds or changes functionality, update the documentation accordingly.
 - Please ensure your code follows Klark's coding standards (discussed below).
 
-## Commit Message Convention
+## Commit Message Convention 📝
 
 To keep the commit history clean and readable, please follow the commit message convention:
 
@@ -73,9 +73,9 @@ feat(settings): add general settings tab fix(tasks): resolve task sorting issue 
 
 For more detailed specifications, you can refer to [Conventional Commits](https://www.conventionalcommits.org/).
 
-## Branch Naming Convention
+## Branch Naming Convention ✓
 
-Branch names should be in the format:
+When creating a new branch, follow the naming convention to make it easier to identify the purpose of the branch. Branch names should follow this format:
 
 `TYPE-ISSUE_ID-DESCRIPTION`
 
@@ -84,7 +84,7 @@ Examples:
 - `fix-101-fix-login-error`
 - `feat-203-add-client-management`
 
-## Coding Standards
+## Coding Standards 📏
 
 **JavaScript Coding Standard**
 
@@ -97,11 +97,6 @@ npm run format
 ### User Interface
 
 Klark's UI is built with [Next Js](https://nextjs.org/), [HeroIcons](https://heroicons.com/), and the [Tailwind UI](https://tailwindui.com/) component library.
-
-
-## Security and Privacy
-
-Security and privacy are extremely important to Klark, developers, and users alike. Make sure to follow the best industry standards and practices.
 
 ## Adding New Dependencies
 Before adding a new dependency, make sure it is essential to the project. You should open an issue to discuss the need for the dependency before submitting a pull request.
@@ -125,6 +120,10 @@ In addition to coding, there are other ways you can contribute to Klark:
 - Submit feedback or report bugs: Feedback is essential for improving Klark. Submit your ideas, experiences, or bugs through GitHub issues.
 - Help others: Respond to questions from other contributors or users on GitHub, Discord, or Stack Overflow.
 
-## Thank You
+## Security and Privacy 🔒
+
+Security and privacy are extremely important to Klark, developers, and users alike. Make sure to follow the best industry standards and practices. If you find a security vulnerability, please report it to [info@buildingbloques.com](mailto:info@buildingbloques.com) immediately.
+
+## Thank You 🙏
 
 Thank you for considering contributing to Klark! We’re excited to see what you’ll bring to the project.
