@@ -50,7 +50,12 @@ the following categories:
 - `chore`: all changes to the repository that do not fit into any of the above
   categories
 
-  e.g. `feat(components): add new prop to the avatar component`
+example:
+
+```
+feat(components): add new prop to the avatar component
+```
+
 
 If you are interested in the detailed specification you can visit
 https://www.conventionalcommits.org/ or check out the
