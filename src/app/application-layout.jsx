@@ -15,7 +15,6 @@ import {
   SidebarBody,
   SidebarFooter,
   SidebarHeader,
-  SidebarHeading,
   SidebarItem,
   SidebarLabel,
   SidebarSection,
@@ -42,11 +41,7 @@ import {
   UserGroupIcon,
   UsersIcon,
 } from '@heroicons/react/16/solid'
-import {
-  Cog6ToothIcon,
-  HomeIcon,
-  QuestionMarkCircleIcon,
-} from '@heroicons/react/20/solid'
+import { Cog6ToothIcon, HomeIcon, QuestionMarkCircleIcon } from '@heroicons/react/20/solid'
 import { usePathname } from 'next/navigation'
 
 function AccountDropdownMenu({ anchor }) {
@@ -95,6 +90,27 @@ function EmployeeDropdownMenu({ anchor }) {
         <ClockIcon />
         <DropdownLabel>Time tracking</DropdownLabel>
       </DropdownItem>
+    </DropdownMenu>
+  )
+}
+
+function FinanceDropdown({ anchor }) {
+  return (
+    <DropdownMenu className="min-w-64" anchor={anchor}>
+      <DropdownItem href="/finance">
+        <CalculatorIcon />
+        <DropdownLabel>Payroll</DropdownLabel>
+      </DropdownItem>
+      <DropdownItem href="#">
+        <GlobeAltIcon />
+        <DropdownLabel>Invoices</DropdownLabel>
+      </DropdownItem>
+      {/* <DropdownDivider /> */}
+      <DropdownItem href="#">
+        <ClipboardIcon />
+        <DropdownLabel>Builling</DropdownLabel>
+      </DropdownItem>
+      <DropdownDivider />
     </DropdownMenu>
   )
 }
@@ -162,7 +178,6 @@ export function ApplicationLayout({ events, children }) {
                   <ChevronDownIcon />
                 </DropdownButton>
                 <EmployeeDropdownMenu anchor="bottom start" />
-                
               </Dropdown>
               <SidebarItem href="/customers">
                 <UserGroupIcon />
@@ -172,10 +187,14 @@ export function ApplicationLayout({ events, children }) {
                 <ClipboardDocumentIcon />
                 <SidebarLabel>Tasks</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/finance">
-                <CalculatorIcon />
-                <SidebarLabel>Finance</SidebarLabel>
-              </SidebarItem>
+              <Dropdown>
+                <DropdownButton as={SidebarItem}>
+                  <UsersIcon />
+                  <SidebarLabel>Finance</SidebarLabel>
+                  <ChevronDownIcon />
+                </DropdownButton>
+                <FinanceDropdown anchor="bottom start" />
+              </Dropdown>
             </SidebarSection>
 
             {/* <SidebarSection className="max-lg:hidden">
