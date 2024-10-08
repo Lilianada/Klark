@@ -1,15 +1,16 @@
-import { CalendarComp } from '@/components/CalenderComp'
+import { CalendarComp } from '@/components/homepage/CalenderComp'
 import { Button } from '@/components/catalyst/button'
 import { Heading, Subheading } from '@/components/catalyst/heading'
-import Invoice from '@/components/Invoice'
-import { ModeToggle } from '@/components/mode'
-import { Reminder, TaskSummary } from '@/components/TaskSummary'
-import Timer from '@/components/timer'
+import Invoice from '@/components/homepage/Invoice'
+import { ModeToggle } from '@/components/homepage/mode'
+import { Reminder, TaskSummary } from '@/components/homepage/TaskSummary'
+import Timer from '@/components/homepage/timer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ClockIcon, DocumentIcon, PlusIcon } from '@heroicons/react/16/solid'
 import { Activity, Users } from 'lucide-react'
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { AttendanceMetrics } from '@/components/homepage/AttendanceMetrics'
 
 function QuickAction({ title, icon: Icon }) {
   return (
@@ -164,7 +165,9 @@ export default async function Home() {
             </Card>
           </div>
 
-          <Invoice />
+          {/* <Invoice /> */}
+
+          <AttendanceMetrics />
         </div>
 
         <div class="flex flex-col gap-4 lg:col-span-4">
