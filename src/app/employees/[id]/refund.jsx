@@ -1,11 +1,11 @@
 'use client'
 
-import { Button } from '@/components/button'
-import { Checkbox, CheckboxField } from '@/components/checkbox'
-import { Dialog, DialogActions, DialogBody, DialogDescription, DialogTitle } from '@/components/dialog'
-import { Description, Field, FieldGroup, Label } from '@/components/fieldset'
-import { Input } from '@/components/input'
-import { Select } from '@/components/select'
+import { Button } from '@/components/catalyst/button'
+import { Checkbox, CheckboxField } from '@/components/catalyst/checkbox'
+import { Dialog, DialogActions, DialogBody, DialogDescription, DialogTitle } from '@/components/catalyst/dialog'
+import { Description, Field, FieldGroup, Label } from '@/components/catalyst/fieldset'
+import { Input } from '@/components/catalyst/input'
+import { Select } from '@/components/catalyst/select'
 import { useState } from 'react'
 
 export function RefundOrder({ amount, ...props }) {

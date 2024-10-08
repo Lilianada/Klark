@@ -1,6 +1,6 @@
-import { Avatar } from '@/components/avatar'
-import { Button } from '@/components/button'
-import { Heading } from '@/components/heading'
+import { Avatar } from '@/components/catalyst/avatar'
+import { Button } from '@/components/catalyst/button'
+import { Heading } from '@/components/catalyst/heading'
 import {
   Pagination,
   PaginationGap,
@@ -8,8 +8,8 @@ import {
   PaginationNext,
   PaginationPage,
   PaginationPrevious,
-} from '@/components/pagination'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table'
+} from '@/components/catalyst/pagination'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/catalyst/table'
 import { getEmployees } from '@/data'
 
 export const metadata = {

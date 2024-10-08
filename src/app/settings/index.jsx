@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/catalyst/button'
 import { CreditCardIcon, KeyIcon, SquaresPlusIcon, UserCircleIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 import General from './general'
-import { Navbar, NavbarItem, NavbarSection } from '@/components/navbar'
+import { Navbar, NavbarItem, NavbarSection } from '@/components/catalyst/navbar'
 
 const tabs = [
   { name: 'General', content: <General />, icon: UserCircleIcon },

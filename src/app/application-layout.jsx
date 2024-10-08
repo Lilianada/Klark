@@ -1,6 +1,6 @@
 'use client'
 
-import { Avatar } from '@/components/avatar'
+import { Avatar } from '@/components/catalyst/avatar'
 import {
   Dropdown,
   DropdownButton,
@@ -8,8 +8,8 @@ import {
   DropdownItem,
   DropdownLabel,
   DropdownMenu,
-} from '@/components/dropdown'
-import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/navbar'
+} from '@/components/catalyst/dropdown'
+import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/catalyst/navbar'
 import {
   Sidebar,
   SidebarBody,
@@ -19,8 +19,8 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from '@/components/sidebar'
-import { SidebarLayout } from '@/components/sidebar-layout'
+} from '@/components/catalyst/sidebar'
+import { SidebarLayout } from '@/components/catalyst/sidebar-layout'
 
 import {
   ArrowRightStartOnRectangleIcon,

@@ -1,23 +1,15 @@
-import { Badge } from '@/components/badge'
-import { Button } from '@/components/button'
-import { Checkbox, CheckboxField, CheckboxGroup } from '@/components/checkbox'
-import { Description, Fieldset, Label } from '@/components/fieldset'
-import { Heading, Subheading } from '@/components/heading'
-import { Select } from '@/components/select'
+import { CalendarComp } from '@/components/CalenderComp'
+import { Badge } from '@/components/catalyst/badge'
+import { Button } from '@/components/catalyst/button'
+import { Heading, Subheading } from '@/components/catalyst/heading'
+import { Select } from '@/components/catalyst/select'
+import Invoice from '@/components/Invoice'
+import { ModeToggle } from '@/components/mode'
+import { Reminder, TaskSummary } from '@/components/TaskSummary'
 import Timer from '@/components/timer'
-import { ClipboardDocumentListIcon, ClockIcon, PlusCircleIcon, PlusIcon, UserGroupIcon } from '@heroicons/react/16/solid'
-
-function TaskSummary({ label, description }) {
-  return (
-    <CheckboxGroup>
-      <CheckboxField>
-        <Checkbox name="task summary" value={description} defaultChecked />
-        <Label>{label}</Label>
-        <Description>{description}</Description>
-      </CheckboxField>
-    </CheckboxGroup>
-  )
-}
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ClockIcon, DocumentIcon, PlusIcon } from '@heroicons/react/16/solid'
+import { Activity, Users } from 'lucide-react'
 
 function QuickAction({ title, icon: Icon }) {
   return (
@@ -27,17 +19,6 @@ function QuickAction({ title, icon: Icon }) {
     </div>
   )
 }
-
-{/* <Navbar>
-  <NavbarSection>
-    <NavbarItem href="/search" aria-label="Search">
-      <MagnifyingGlassIcon />
-    </NavbarItem>
-    <NavbarItem href="/inbox" aria-label="Inbox">
-      <InboxIcon />
-    </NavbarItem>
-  </NavbarSection>
-</Navbar> */}
 
 function Stat({ title, value, change, icon: Icon, text }) {
   return (
@@ -57,14 +38,15 @@ function Stat({ title, value, change, icon: Icon, text }) {
 
 function ClockInOut({ title, icon: Icon }) {
   return (
-    <div className="rounded-lg border border-zinc-700 p-4">
-      <div className="flex items-center justify-between">
-        <div className="text-lg/6 font-medium sm:text-sm/6">{title}</div>
-        {Icon && <Icon className="mr-2 h-4 w-4 text-zinc-500" />}
-      </div>
-
-      <Timer />
-    </div>
+    <Card x-chunk="dashboard-01-chunk-0">
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-sm font-medium">{title}</CardTitle>
+        {Icon && <Icon className="text-muted-foreground h-4 w-4" />}
+      </CardHeader>
+      <CardContent>
+        <Timer />
+      </CardContent>
+    </Card>
   )
 }
 
@@ -73,7 +55,7 @@ function Wrapper({ title, children, icon: Icon }) {
     <div className="rounded-lg border border-zinc-700 p-4">
       <div className="flex items-center justify-between">
         <Subheading>{title}</Subheading>
-        <Button outline className="text-sm cursor-pointer">
+        <Button outline className="cursor-pointer text-sm">
           <Icon className="h-4 w-4 text-zinc-500" />
         </Button>
       </div>
@@ -85,10 +67,11 @@ function Wrapper({ title, children, icon: Icon }) {
 export default async function Home() {
   return (
     <>
-    <div className="flex justify-between items-center">
-      <Heading>Good afternoon, Erica</Heading>
-      <QuickAction icon={PlusCircleIcon} />
-    </div>
+      <div className="flex items-center justify-between">
+        <Heading>Good afternoon, Erica</Heading>
+        <ModeToggle />
+      </div>
+
       {/* Date dropdown */}
       <div className="mt-8 flex items-end justify-between">
         <Subheading>Overview</Subheading>
@@ -102,48 +85,100 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Stats for employee and customer total  */}
-      <div className="mt-4 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-        <ClockInOut title="Clock In/Out" icon={ClockIcon} value="5" change="+15%" text="from yesterday" />
-        <Stat title="Total Employees" icon={UserGroupIcon} value="122" change="+0%" text="from last month" />
-        <Stat title="Total Customers" icon={UserGroupIcon} value="455" change="-15%" text="from last week" />
-        <Stat
-          title="Total Tasks Opened"
-          icon={ClipboardDocumentListIcon}
-          value="5"
-          change="+15%"
-          text="from yesterday"
-        />
-      </div>
+      <main className="flex flex-1 flex-col gap-4 pt-4 md:gap-8 md:pt-8">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+          <Card x-chunk="dashboard-01-chunk-0">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Employees</CardTitle>
+              <Users className="text-muted-foreground h-4 w-4" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">+3189</div>
+              <p className="text-muted-foreground text-xs">+20.1% from last month</p>
+            </CardContent>
+          </Card>
+          <Card x-chunk="dashboard-01-chunk-1">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Customers</CardTitle>
+              <Users className="text-muted-foreground h-4 w-4" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">+2350</div>
+              <p className="text-muted-foreground text-xs">+180.1% from last month</p>
+            </CardContent>
+          </Card>
+          <Card x-chunk="dashboard-01-chunk-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Leads</CardTitle>
+              <Users className="text-muted-foreground h-4 w-4" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">+134</div>
+              <p className="text-muted-foreground text-xs">+19% from last month</p>
+            </CardContent>
+          </Card>
+          <Card x-chunk="dashboard-01-chunk-3">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Active Tasks</CardTitle>
+              <Activity className="text-muted-foreground h-4 w-4" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">+23</div>
+              <p className="text-muted-foreground text-xs">+20 since last hour</p>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
 
-      {/* Tasks */}
-      <div className="mt-4">
-        {/* <Subheading>Daily Schedules</Subheading> */}
+      <div class="mt-4 grid gap-4 lg:grid-cols-10">
+        {/* Stats for employee and customer total  */}
+        <div class="grid gap-y-4 lg:col-span-6 lg:grid-cols-1">
+          {/* Tasks */}
 
-        <div className="mt-4 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-          <Wrapper title="Task Summary" icon={PlusIcon}>
-            <Fieldset>
-              <TaskSummary label="Send email to George Bush" description="4 October, 2024 at 13:09pm" />
-              <TaskSummary label="Respond to Queen Elizabeth" description="24 September, 2024 at 15:09pm" />
-              <TaskSummary label="Send email to Anthony Joshua" description="14 August, 2024 at 11:00pm" />
-            </Fieldset>
-          </Wrapper>
+          <div className="grid grid-cols-2 gap-4">
+            <Card x-chunk="dashboard-01-chunk-0">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">Task Summary</CardTitle>
+                <DocumentIcon className="text-muted-foreground h-4 w-4" />
+              </CardHeader>
+              <CardContent className="mt-3 grid gap-4">
+                <TaskSummary
+                  label="Send email to George Bush"
+                  description="4 October, 2024 at 13:09pm"
+                  status="completed"
+                />
+                <TaskSummary
+                  label="Respond to Queen Elizabeth"
+                  description="24 September, 2024 at 15:09pm"
+                  status="canceled"
+                />
+                <TaskSummary
+                  label="Send email to Anthony Joshua"
+                  description="14 August, 2024 at 11:00pm"
+                  status="completed"
+                />
+              </CardContent>
+            </Card>
 
-          <Wrapper title="Invoice Overview" icon={PlusIcon}>
-            <Fieldset>
-              <TaskSummary label="Meeting with the board" description="4 October, 2024 at 13:09pm" />
-              <TaskSummary label="Meeting with the board" description="24 September, 2024 at 15:09pm" />
-              <TaskSummary label="Meeting with the board" description="14 August, 2024 at 11:00pm" />
-            </Fieldset>
-          </Wrapper>
+            <Card x-chunk="dashboard-01-chunk-0">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">Reminders</CardTitle>
+                <PlusIcon className="text-muted-foreground h-4 w-4" />
+              </CardHeader>
+              <CardContent className="mt-3 grid gap-4">
+                <Reminder label="Meeting with the board" description="4 October, 2024 at 13:09pm" />
+                <Reminder label="Meeting with the board" description="24 September, 2024 at 15:09pm" />
+                <Reminder label="Meeting with the board" description="14 August, 2024 at 11:00pm" />
+              </CardContent>
+            </Card>
+          </div>
 
-          <Wrapper title="Reminders" icon={PlusIcon}>
-            <Fieldset>
-              <TaskSummary label="Meeting with the board" description="4 October, 2024 at 13:09pm" />
-              <TaskSummary label="Meeting with the board" description="24 September, 2024 at 15:09pm" />
-              <TaskSummary label="Meeting with the board" description="14 August, 2024 at 11:00pm" />
-            </Fieldset>
-          </Wrapper>
+          <Invoice />
+        </div>
+
+        <div class="flex flex-col gap-4 lg:col-span-4">
+          <ClockInOut title="Clock In / Out" icon={ClockIcon} value="5" change="+15%" text="from yesterday" />
+          <CalendarComp />
         </div>
       </div>
 

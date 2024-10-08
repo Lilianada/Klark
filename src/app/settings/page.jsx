@@ -6,8 +6,8 @@ export const metadata = {
 
 import React from 'react'
 import SettingIndex from '.'
-import { Heading } from '@/components/heading'
-import { Divider } from '@/components/divider'
+import { Heading } from '@/components/catalyst/heading'
+import { Divider } from '@/components/catalyst/divider'
 
 export default function Settings() {
   return (
