@@ -11,7 +11,7 @@ export default function Invoice() {
     <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
       <CardHeader className="flex flex-row items-center">
         <div className="grid gap-2">
-          <CardTitle>Transactions</CardTitle>
+          <CardTitle>Employees</CardTitle>
           <CardDescription>Recent transactions from your store.</CardDescription>
         </div>
         <Button asChild size="sm" className="ml-auto gap-1">
