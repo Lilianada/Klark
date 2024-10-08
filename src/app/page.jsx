@@ -1,8 +1,6 @@
 import { CalendarComp } from '@/components/CalenderComp'
-import { Badge } from '@/components/catalyst/badge'
 import { Button } from '@/components/catalyst/button'
 import { Heading, Subheading } from '@/components/catalyst/heading'
-import { Select } from '@/components/catalyst/select'
 import Invoice from '@/components/Invoice'
 import { ModeToggle } from '@/components/mode'
 import { Reminder, TaskSummary } from '@/components/TaskSummary'
@@ -11,27 +9,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ClockIcon, DocumentIcon, PlusIcon } from '@heroicons/react/16/solid'
 import { Activity, Users } from 'lucide-react'
 
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+
 function QuickAction({ title, icon: Icon }) {
   return (
     <div className="flex items-center gap-2">
       {Icon && <Icon className="h-4 w-4 text-zinc-500" />}
       <span>{title}</span>
-    </div>
-  )
-}
-
-function Stat({ title, value, change, icon: Icon, text }) {
-  return (
-    <div className="rounded-lg border border-zinc-700 p-4">
-      <div className="flex items-center justify-between">
-        <div className="text-lg/6 font-medium sm:text-sm/6">{title}</div>
-        {Icon && <Icon className="mr-2 h-4 w-4 text-zinc-500" />}
-      </div>
-      <div className="text-3xl/8 font-semibold sm:text-2xl/8">{value}</div>
-      <div className="mt-4 text-sm/6 sm:text-xs/6">
-        <Badge color={change.startsWith('+') ? 'lime' : 'pink'}>{change}</Badge>{' '}
-        <span className="text-zinc-500">{text}</span>
-      </div>
     </div>
   )
 }
@@ -75,18 +59,26 @@ export default async function Home() {
       {/* Date dropdown */}
       <div className="mt-8 flex items-end justify-between">
         <Subheading>Overview</Subheading>
-        <div>
-          <Select name="period">
-            <option value="last_week">Last week</option>
-            <option value="last_two">Last two weeks</option>
-            <option value="last_month">Last month</option>
-            <option value="last_quarter">Last quarter</option>
+        <Card>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Last week" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="last_week">Last week</SelectItem>
+                <SelectItem value="last_two">Last two weeks</SelectItem>
+                <SelectItem value="last_month">Last month</SelectItem>
+                <SelectItem value="last_quarter">Last quater</SelectItem>
+              </SelectGroup>
+            </SelectContent>
           </Select>
-        </div>
+        </Card>
       </div>
 
       <main className="flex flex-1 flex-col gap-4 pt-4 md:gap-8 md:pt-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+          {/* Organiztion Stats */}
           <Card x-chunk="dashboard-01-chunk-0">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Employees</CardTitle>
@@ -131,16 +123,15 @@ export default async function Home() {
       </main>
 
       <div class="mt-4 grid gap-4 lg:grid-cols-10">
-        {/* Stats for employee and customer total  */}
         <div class="grid gap-y-4 lg:col-span-6 lg:grid-cols-1">
-          {/* Tasks */}
-
           <div className="grid grid-cols-2 gap-4">
+              {/* Tasks */}
             <Card x-chunk="dashboard-01-chunk-0">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Task Summary</CardTitle>
                 <DocumentIcon className="text-muted-foreground h-4 w-4" />
               </CardHeader>
+
               <CardContent className="mt-3 grid gap-4">
                 <TaskSummary
                   label="Send email to George Bush"
