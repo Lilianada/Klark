@@ -3,7 +3,7 @@
 import { CheckIcon } from '@radix-ui/react-icons'
 import { Checkbox } from '@/components/ui/checkbox'
 import { XMarkIcon } from '@heroicons/react/16/solid'
-// import { Description, Label } from './catalyst/fieldset'
+// import { Description, Label } from './klark/fieldset'
 
 export function TaskSummary({ label, description, status }) {
   const statusIcon = status === 'completed' ? (
