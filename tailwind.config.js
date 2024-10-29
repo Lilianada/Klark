@@ -8,7 +8,7 @@ const config = {
   	extend: {
   		fontFamily: {
   			sans: ['Inter, sans-serif', { fontFeatureSettings: 'cv11"' }],
-  			serif: ['Moderustic, sans-serif']
+  			serif: ['Moderustic, sans-serif', { fontFeatureSettings: 'cv11"' }]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
