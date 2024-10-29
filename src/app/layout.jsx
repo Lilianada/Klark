@@ -27,8 +27,8 @@ export default async function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Outfit:wght@100..900&display=swap"
           rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Outfit:wght@100..900&display=swap"
         />
       </head>
       <body>
