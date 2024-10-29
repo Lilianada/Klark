@@ -1,7 +1,7 @@
 import { getEvents } from '@/data'
 import '@/styles/tailwind.css'
 
-import { ThemeProvider } from '@/components/catalyst/theme-provider'
+import { ThemeProvider } from '@/components/klark/theme-provider'
 import { ApplicationLayout } from './application-layout'
 
 export const metadata = {
@@ -18,18 +18,18 @@ export default async function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="text-zinc-950 antialiased lg:bg-zinc-100 dark:bg-zinc-950 dark:text-white "
+      className='text-zinc-950 antialiased lg:bg-zinc-100 dark:bg-zinc-950 dark:text-white'
     >
       <head>
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Outfit:wght@100..900&display=swap" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         
       </head>
-      <body>
+      <body 
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ApplicationLayout events={events}>
             {children}

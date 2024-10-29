@@ -1,6 +1,6 @@
 'use client'
 
-import { Avatar } from '@/components/catalyst/avatar'
+import { Avatar } from '@/components/klark/avatar'
 import {
   Dropdown,
   DropdownButton,
@@ -8,8 +8,8 @@ import {
   DropdownItem,
   DropdownLabel,
   DropdownMenu,
-} from '@/components/catalyst/dropdown'
-import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/catalyst/navbar'
+} from '@/components/klark/dropdown'
+import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/klark/navbar'
 import {
   Sidebar,
   SidebarBody,
@@ -19,8 +19,8 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from '@/components/catalyst/sidebar'
-import { SidebarLayout } from '@/components/catalyst/sidebar-layout'
+} from '@/components/klark/sidebar'
+import { SidebarLayout } from '@/components/klark/sidebar-layout'
 
 import {
   ArrowRightStartOnRectangleIcon,
@@ -138,7 +138,7 @@ export function ApplicationLayout({ events, children }) {
           <SidebarHeader>
             <Dropdown>
               <DropdownButton as={SidebarItem}>
-                <Avatar src="/teams/klark.svg" />
+                <Avatar src="/site/klark.svg" />
                 <SidebarLabel className="font-serif">Klark</SidebarLabel>
                 <ChevronDownIcon />
               </DropdownButton>

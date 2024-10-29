@@ -1,6 +1,6 @@
 import { CalendarComp } from '@/components/homepage/CalenderComp'
-import { Button } from '@/components/catalyst/button'
-import { Heading, Subheading } from '@/components/catalyst/heading'
+import { Button } from '@/components/klark/button'
+import { Heading, Subheading } from '@/components/klark/heading'
 import { ModeToggle } from '@/components/homepage/mode'
 import { Reminder, TaskSummary } from '@/components/homepage/TaskSummary'
 import Timer from '@/components/homepage/timer'
@@ -52,7 +52,7 @@ export default async function Home() {
   return (
     <>
       <div className="flex items-center justify-between">
-        <Heading>Good afternoon, Erica</Heading>
+        <Heading className='font-serif'>Good afternoon, Erica</Heading>
         <ModeToggle />
       </div>
 
