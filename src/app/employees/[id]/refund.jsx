@@ -1,11 +1,11 @@
 'use client'
 
-import { Button } from '@/components/catalyst/button'
-import { Checkbox, CheckboxField } from '@/components/catalyst/checkbox'
-import { Dialog, DialogActions, DialogBody, DialogDescription, DialogTitle } from '@/components/catalyst/dialog'
-import { Description, Field, FieldGroup, Label } from '@/components/catalyst/fieldset'
-import { Input } from '@/components/catalyst/input'
-import { Select } from '@/components/catalyst/select'
+import { Button } from '@/components/klark/button'
+import { Checkbox, CheckboxField } from '@/components/klark/checkbox'
+import { Dialog, DialogActions, DialogBody, DialogDescription, DialogTitle } from '@/components/klark/dialog'
+import { Description, Field, FieldGroup, Label } from '@/components/klark/fieldset'
+import { Input } from '@/components/klark/input'
+import { Select } from '@/components/klark/select'
 import { useState } from 'react'
 
 export function RefundOrder({ amount, ...props }) {

@@ -1,10 +1,10 @@
-import { Avatar } from '@/components/catalyst/avatar';
-import { Badge } from '@/components/catalyst/badge';
-import { Button } from '@/components/catalyst/button';
-import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/components/catalyst/description-list';
-import { Divider } from '@/components/catalyst/divider';
-import { Heading, Subheading } from '@/components/catalyst/heading';
-import { Link } from '@/components/catalyst/link';
+import { Avatar } from '@/components/klark/avatar';
+import { Badge } from '@/components/klark/badge';
+import { Button } from '@/components/klark/button';
+import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/components/klark/description-list';
+import { Divider } from '@/components/klark/divider';
+import { Heading, Subheading } from '@/components/klark/heading';
+import { Link } from '@/components/klark/link';
 import { getEmployees } from '@/data';
 import { CalendarIcon, ChevronLeftIcon } from '@heroicons/react/16/solid';
 import { notFound } from 'next/navigation';
