@@ -1,7 +1,6 @@
 const config = {
     darkMode: ['class'],
     content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -9,7 +8,7 @@ const config = {
   	extend: {
   		fontFamily: {
   			sans: ['Inter, sans-serif', { fontFeatureSettings: 'cv11"' }],
-  			serif: ['Moderustic, sans-serif', { fontFeatureSettings: 'cv11"' }]
+  			serif: ['Moderustic, sans-serif']
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
