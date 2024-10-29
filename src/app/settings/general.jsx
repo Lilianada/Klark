@@ -1,13 +1,13 @@
 import React from 'react'
 import { Address } from './address'
-import { Checkbox, CheckboxField } from '@/components/catalyst/checkbox'
-import { Divider } from '@/components/catalyst/divider'
-import { Label } from '@/components/catalyst/fieldset'
-import { Subheading } from '@/components/catalyst/heading'
-import { Input } from '@/components/catalyst/input'
-import { Select } from '@/components/catalyst/select'
-import { Text } from '@/components/catalyst/text'
-import { Textarea } from '@/components/catalyst/textarea'
+import { Checkbox, CheckboxField } from '@/components/klark/checkbox'
+import { Divider } from '@/components/klark/divider'
+import { Label } from '@/components/klark/fieldset'
+import { Subheading } from '@/components/klark/heading'
+import { Input } from '@/components/klark/input'
+import { Select } from '@/components/klark/select'
+import { Text } from '@/components/klark/text'
+import { Textarea } from '@/components/klark/textarea'
 
 export default function General() {
   return (
