@@ -1,7 +1,6 @@
 import { CalendarComp } from '@/components/homepage/CalenderComp'
 import { Button } from '@/components/catalyst/button'
 import { Heading, Subheading } from '@/components/catalyst/heading'
-import Invoice from '@/components/homepage/Invoice'
 import { ModeToggle } from '@/components/homepage/mode'
 import { Reminder, TaskSummary } from '@/components/homepage/TaskSummary'
 import Timer from '@/components/homepage/timer'
